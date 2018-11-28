@@ -11791,7 +11791,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -11872,7 +11872,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">unicodedata</span>
@@ -11916,7 +11916,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">SimpleGoodTuringProbDist</span><span class="p">,</span> <span class="n">FreqDist</span>
@@ -11952,7 +11952,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">p_t_ws_wt</span><span class="o">=</span><span class="p">{}</span>
@@ -12002,15 +12002,19 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="EM-algorithm">EM algorithm<a class="anchor-link" href="#EM-algorithm">&#182;</a></h1><p>Finally we estimate the translation probabilities using the following expectation maximization algorithm:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>$$p(T=1|w_s) = \frac{p(w_s|T=1) p(T=1)}{p(w_s)}$$</p>
-<p>\begin{align}
-\label{p t=0|ws}
-p(w_s) &amp;= p(w_s|T=1)\lambda + p(w_s|T=0)(1-\lambda) \nonumber \\
-&amp;=p(w_s|\theta_F)\lambda + \frac{p(T=0|w_s)p(w_s)(1-\lambda)}{p(T=0)} \nonumber \\
-&amp; = p(w_s|\theta_F)\lambda + p(T=0|w_s)p(w_s)
-\end{align}</p>
-<p>$$p(T=0|w_s) = (1-\frac{p(w_s|\theta_F)}{p(w_s|\mathcal{C})}\lambda)
-$$</p>
+<p>$$p(w_s) = p(w_s|T=1)\lambda + p(w_s|T=0)(1-\lambda)$$</p>
+<p>$$=p(w_s|\theta_F)\lambda + \frac{p(T=0|w_s)p(w_s)(1-\lambda)}{p(T=0)} $$
+ $$= p(w_s|\theta_F)\lambda + p(T=0|w_s)p(w_s)$$</p>
+<p>$$p(T=0|w_s) = (1-\frac{p(w_s|\theta_F)}{p(w_s|\mathcal{C})}\lambda)$$</p>
 <p>$$p^{(i)}(T=1|w_s, w_t) = \frac{\lambda p^{(i)}(w_t|T=1, w_s)}{(1-\frac{p(w_s|\theta_F)}{p(w_s|\mathcal{C}_s)}\lambda) p(w_t|\mathcal{C}_t) + \lambda p^{(i)}(w_t|T=1, w_s)}$$</p>
 <p>$$p^{(i+1)}(w_t|T=1, w_s) = \frac{p(w_t|\theta_{F'}) p^{(i)}(T=1|w_s, w_t)}{\sum_{w'_t \in \mathscr{T}\{w_s\}}{p(w'_t|\theta_{F'}) p^{(i)}(T=1|w_s, w'_t)}}$$</p>
 
@@ -12019,7 +12023,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
@@ -12060,6 +12064,15 @@ $$</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>[1] Javid Dadashkarimi, Azadeh Shakery, Heshaam Faili, and Hamed Zamani. An Expectation-Maximization Algorithm for Query Translation Based on Pseudo-Relevant Documents. Journal of Information Processing &amp; Management, Elsevier, 2017 Journal Paper.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
